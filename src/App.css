@@ -16,7 +16,7 @@ body {
   justify-content: flex-start;
   width: 800px;
   min-height: 600px;
-  background: black;
+  background: #000000;
   text-align: center;
   margin: 32px auto;
   border-radius: 20px;

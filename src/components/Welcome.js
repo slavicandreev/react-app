@@ -1,24 +1,26 @@
 import React from 'react';
 
-export default function Welcome(props) {
-  const name = props.name ?? 'students!';
-  const topics = [
-    'React',
-    'Components',
-    'Props',
-    'Babel'
-  ]
-  // All functional components must have a return method that contains JSX.
-  // We return all the JSX inside a parent element with a className of "container".
-  return (
-    <div className="container">
-      <h1>Hello {name}!</h1>
-      <p>Today we will be learning about the following:</p>
-      <ul className="parent">
-        {
-          topics.map(topic => <li>{topic}</li>)
-        }
-      </ul>
-    </div>
-  );
+// Here we declare our Welcome component
+// We accept props from the App component and immediately assign them to their own variables: `name`, and `topic`
+// Topic is set to the value of "Web development" if no value is provided
+export default function Welcome({ name, topic = 'Web Development' }) {
+  // Boolean value that returns true if both props are not empty
+  const infoPassed = name && topic;
+
+  if (infoPassed) {
+    return (    <h1>
+      Welcome, {name}! We hope you learn a lot about {topic}.
+    </h1>)
+  }
+  else {
+    return <span>Hey there!</span>
+  }
+  // If the correct info was passed as props, render the welcome statement. Otherwise, rendering a basic "Hey there!"
+  // return infoPassed ? (
+  //   <h1>
+  //     Welcome, {name}! We hope you learn a lot about {topic}.
+  //   </h1>
+  // ) : (
+  //   <span>Hey there!</span>
+  // );
 }

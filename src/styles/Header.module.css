@@ -1,0 +1,14 @@
+h1 {
+  color: purple;
+}
+.header {
+  background: #b71775;
+  height: 200px;
+}
+
+.heading {
+  margin: 0;
+  padding-top: 75px;
+  text-align: center;
+  font-size: 3rem;
+}

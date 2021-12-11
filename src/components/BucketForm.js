@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
+import styles from './BucketForm.module.css';
 function BucketForm(props) {
+
   const [input, setInput] = useState('');
   let [eagerness, setEagerness] = useState('');
 
